@@ -1,0 +1,197 @@
+{
+    "propertyType": [
+        {
+            "id": 1,
+            "type": "Resort",
+            "image": "https://i.ibb.co/qC0yrcm/resort.jpg"
+        },
+        {
+            "id": 2,
+            "type": "Apartment",
+            "image": "https://i.ibb.co/sv4KL7H/apartment.jpg"
+        },
+        {
+            "id": 3,
+            "type": "Hotel",
+            "image": "https://i.ibb.co/N6kLJ9x/hotel.jpg"
+        },
+        {
+            "id": 4,
+            "type": "Motel",
+            "image": "https://i.ibb.co/ZTJTxZy/motel.jpg"
+        }
+    ],
+    "bestSeller": [
+        {
+            "id": 1001,
+            "location": "Quebec City, Quebec",
+            "price": 499,
+            "image": "https://i.ibb.co/2PfDNNV/quebec.jpg"
+        },
+        {
+            "id": 1002,
+            "location": "Halifax, Nova Scotia",
+            "price": 299,
+            "image": "https://i.ibb.co/n10NkJ6/halifax.jpg"
+        },
+        {
+            "id": 1003,
+            "location": "South Island, New Zealand",
+            "price": 350,
+            "image": "https://i.ibb.co/0Q2fXrW/south-island.jpg"
+        },
+        {
+            "id": 1004,
+            "location": "Rome, Italy",
+            "price": 460,
+            "image": "https://i.ibb.co/JFsXYjC/rome.jpg"
+        },
+        {
+            "id": 1005,
+            "location": "Phuket, Thailand",
+            "price": 299,
+            "image": "https://i.ibb.co/4NS2PsX/phuket.jpg"
+        },
+        {
+            "id": 1006,
+            "location": "Phuket, Thailand",
+            "price": 329,
+            "image": "https://i.ibb.co/vj8B9mL/grand-deluxe-pool-access.jpg"
+        }
+    ],
+    "propertyList": [
+        {
+            "id": 2001,
+            "title": "Quebec City Castle",
+            "price": 499,
+            "type": "Hotel",
+            "location": "Quebec City, Quebec",
+            "img": "https://i.ibb.co/2PfDNNV/quebec.jpg",
+            "isBestSeller": true,
+            "desc": "Living in the castle",
+            "amenities": [
+                "Pool",
+                "Free Parking",
+                "Restaurant",
+                "Bar",
+                "KTV"
+            ],
+            "rules": "Follow the rules of COVID-19"
+        },
+        {
+            "id": 2002,
+            "title": "One-Night Rest In Halifax",
+            "price": 299,
+            "type": "Motel",
+            "location": "Halifax, Nova Scotia",
+            "img": "https://i.ibb.co/n10NkJ6/halifax.jpg",
+            "isBestSeller": true,
+            "desc": "Graceful surrounding for taking a rest",
+            "amenities": [
+                "Free Parking",
+                "Restaurant"
+            ],
+            "rules": "Follow the rules of COVID-19"
+        },
+        {
+            "id": 2003,
+            "title": "Near-Sea Resort",
+            "price": 350,
+            "type": "Resort",
+            "location": "South Island, New Zealand",
+            "img": "https://i.ibb.co/0Q2fXrW/south-island.jpg",
+            "isBestSeller": true,
+            "desc": "Facing the sea and enjoy the sea breeze",
+            "amenities": [
+                "Free Parking",
+                "Restaurant",
+                "Bar",
+                "Coast"
+            ],
+            "rules": "Follow the rules of COVID-19"
+        },
+        {
+            "id": 2004,
+            "title": "Holiday Motel in Colorado",
+            "price": 249,
+            "type": "Motel",
+            "location": "Grand Lake, Colorado, United State",
+            "img": "https://i.ibb.co/ckLGHtV/Queen-Motel.jpg",
+            "isBestSeller": false,
+            "desc": "have a good night after you travel to here",
+            "amenities": [
+                "Pool",
+                "Free Parking",
+                "Restaurant",
+                "Bar"
+            ],
+            "rules": "Follow the rules of COVID-19"
+        },
+        {
+            "id": 2005,
+            "title": "Have a Luxurious Night",
+            "price": 599,
+            "type": "Hotel",
+            "location": "Dubai, United Arab Emirates",
+            "img": "https://i.ibb.co/7SVGkhh/0x0.jpg",
+            "isBestSeller": false,
+            "desc": "Living higher and overlooking the city",
+            "amenities": [
+                "Pool",
+                "Free Parking",
+                "Restaurant",
+                "Bar"
+            ],
+            "rules": "Follow the rules of COVID-19"
+        },
+        {
+            "id": 2006,
+            "title": "A Normal Day and Night",
+            "price": 369,
+            "type": "Apartment",
+            "location": "Chicago, United State",
+            "img": "https://i.ibb.co/D7ZTpbq/chicago.jpg",
+            "isBestSeller": false,
+            "desc": "Living in downtown with convenient transportation",
+            "amenities": [
+                "Free Parking",
+                "Restaurant",
+                "Bar"
+            ],
+            "rules": "Follow the rules of COVID-19"
+        },
+        {
+            "id": 2007,
+            "title": "Renaissance Party",
+            "price": 460,
+            "type": "Apartment",
+            "location": "Rome, Italy",
+            "img": "https://i.ibb.co/JFsXYjC/rome.jpg",
+            "isBestSeller": true,
+            "desc": "Nice atmosphere that you can enjoy",
+            "amenities": [
+                "Free Parking",
+                "Restaurant",
+                "Park"
+            ],
+            "rules": "Follow the rules of COVID-19"
+        },
+        {
+            "id": 2008,
+            "title": "Coast Resort",
+            "price": 299,
+            "type": "Resort",
+            "location": "Phuket, Thailand",
+            "img": "https://i.ibb.co/4NS2PsX/phuket.jpg",
+            "isBestSeller": true,
+            "desc": "Near the coast, go whenever you want",
+            "amenities": [
+                "Free Parking",
+                "Restaurant",
+                "Bar",
+                "Coast"
+            ],
+            "rules": "Follow the rules of COVID-19"
+        }
+    ]
+}
