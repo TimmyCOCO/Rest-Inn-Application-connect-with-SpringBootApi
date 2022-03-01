@@ -13,7 +13,7 @@ In the project directory, run:
 # Installing packages
 #### Before starting the web application, some packages need to be installed.
 
-Those package include:
+Those packages include:
 - [bootstrap](https://www.npmjs.com/package/bootstrap)
 - [react-bootstrap](https://www.npmjs.com/package/react-bootstrap)
 - [react-icons](https://www.npmjs.com/package/react-icons)
