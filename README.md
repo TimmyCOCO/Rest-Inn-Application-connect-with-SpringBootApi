@@ -10,7 +10,7 @@ In the project directory, run:
 ### `npx create-react-app .`
 
 
-# Installing packages
+# Installing Packages
 #### Before starting the web application, some packages need to be installed.
 
 Those packages include:
@@ -28,7 +28,6 @@ In the project directory, **copy this and run**:
 This project also requires to install [json-server](https://www.npmjs.com/package/json-server)
 json-server must be started when starting the web application
 
-
 In the project directory, run:
 
 ### `npm i json-server`
@@ -38,7 +37,7 @@ Open a new terminal in the project directory and run:
 ### `json-server --watch -p 2000 db.json`
 
 
-# Starting the web application
+# Starting the Web Application
 
 In the project directory, run:
 
