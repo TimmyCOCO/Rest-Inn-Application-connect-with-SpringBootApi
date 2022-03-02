@@ -25,8 +25,7 @@ In the project directory, **copy this and run**:
 
 
 # json-server 
-This project also requires to install [json-server](https://www.npmjs.com/package/json-server)
-json-server must be started when starting the web application
+This project also requires to install [json-server](https://www.npmjs.com/package/json-server). json-server must be started when starting the web application
 
 In the project directory, run:
 
