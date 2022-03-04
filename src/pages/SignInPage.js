@@ -1,7 +1,57 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const SignIn = () => {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    // error message
+    const [errorEmail, setErrorEmail] = useState('')
+    const [errorPassword, setErrorPassword] = useState('')
+
+    // validate form
+    const validate = () => {
+        let isValidated = true
+
+        // regex for check email format
+        let emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+        // for email
+        if (email === "") {
+            // display this error message if email is null
+            setErrorEmail("* Email cannot be empty")
+            isValidated = false
+        } else if (!email.match(emailFormat)) {
+            // display this error message if email is not valid
+            setErrorEmail("* Email is invalid")
+            isValidated = false
+        }
+        else {
+            // don't display the error message
+            setErrorEmail('')
+        }
+
+        // for password
+        if (password === "") {
+            // display the error message if password is null
+            setErrorPassword("* password cannot be empty")
+            isValidated = false
+        }
+        else if (password.length <= 4) {
+            // display the error message if password length is less than 5
+            setErrorPassword("* password is too short")
+            isValidated = false
+        }
+        else {
+            // don't display the error message
+            setErrorPassword('')
+        }
+
+        // return back validate() is true or false
+        return isValidated
+    }
+
+
     return (
         <section className="vh-100 gradient-custom">
             <div className="container py-5 h-100">
@@ -17,17 +67,35 @@ const SignIn = () => {
                                     <form >
                                         <div className="form-outline form-white mb-4">
                                             <label className="form-label" htmlFor="typeEmailX">Email</label>
-                                            <input type="text" id="typeEmailX" className="form-control form-control-lg" />
+                                            <input type="text" id="typeEmailX" className="form-control form-control-lg"
+                                                value={email} onChange={(event) => {
+                                                    setEmail(event.target.value)
+                                                }} />
+                                            <span>{errorEmail}</span>
                                         </div>
 
                                         <div className="form-outline form-white mb-4">
                                             <label className="form-label" htmlFor="typePasswordX">Password</label>
-                                            <input type="password" id="typePasswordX" className="form-control form-control-lg" />
+                                            <input type="password" id="typePasswordX" className="form-control form-control-lg"
+                                                value={password} onChange={(event) => {
+                                                    setPassword(event.target.value)
+                                                }} />
+                                            <span>{errorPassword}</span>
                                         </div>
 
                                         <p className="small mb-5 pb-lg-2"><a className="text-white-50" href="#!">Forgot password?</a></p>
 
-                                        <button className="btn btn-outline-light btn-lg px-5" type="submit">Sign In</button>
+                                        <button className="btn btn-outline-light btn-lg px-5" type="button"
+                                            onClick={() => {
+                                                // when click the button, validate the input
+                                                if (validate()) {
+                                                    alert(' success')
+                                                } else {
+                                                    alert('error')
+                                                }
+                                            }}>
+                                            Sign In</button>
+
 
                                     </form>
 

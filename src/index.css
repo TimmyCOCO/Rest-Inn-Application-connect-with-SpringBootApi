@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* make the form center */
+.form_sign{
+  margin: auto; 
+  width: 25%
+}
+
+.hide{
+  display: none;
+}
+

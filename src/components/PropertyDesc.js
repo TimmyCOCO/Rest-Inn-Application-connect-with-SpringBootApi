@@ -15,13 +15,14 @@ const PropertyDesc = () => {
         amenities: [],
         location: "",
         img: null,
-        isBestSeller: false
+        isBestSeller: false,
+        mapSrc: ""
     })
 
     // for button to go back to the previous page
     const navigate = useNavigate()
 
-    const goBack = (e)=>{
+    const goBack = (e) => {
         e.preventDefault()
         navigate(-1)
     }
@@ -48,7 +49,9 @@ const PropertyDesc = () => {
             {/* <!-- Item Heading --> */}
             <h1 className="my-5" style={fontStyle}>
                 <small className={propertyDesc.isBestSeller ? "" : "hide"} style={{ color: 'red' }}><FaStar /></small> {propertyDesc.title}
+
             </h1>
+
 
             {/* <!-- Item Row --> */}
             <div className="row">
@@ -58,7 +61,12 @@ const PropertyDesc = () => {
                 </div>
 
                 <div className="col-md-5">
-                    <h4 className="my-2">Description</h4>
+                    <h4 className="my-2">Description
+                        {/* embedded google map */}
+                        <iframe src={propertyDesc.mapSrc}
+                            width="200" height="150" style={{ border: '0', float: 'right' }} allowFullScreen="" loading="lazy"></iframe>
+                    </h4>
+
                     <p>{propertyDesc.desc}</p>
                     <hr />
 
@@ -78,16 +86,17 @@ const PropertyDesc = () => {
                     </ul>
 
                     <p><span style={spanStyle}>Rules:</span> {propertyDesc.rules}</p>
-
                 </div>
             </div>
-            {/* <Link to="/PropertyList" >
-                <button type="button" className="btn btn-dark" style={{ float: 'right' }}>Go Back</button>
-            </Link> */}
-            
-            <button type="button" className="btn btn-dark" style={{ float: 'right' }} 
-            onClick={goBack}>Go Back</button>
-           
+
+
+            <hr />
+
+
+
+            <button type="button" className="btn btn-dark" style={{ float: 'right' }}
+                onClick={goBack}>Go Back</button>
+
 
         </div >
     )

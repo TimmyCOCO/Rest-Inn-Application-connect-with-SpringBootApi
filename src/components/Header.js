@@ -17,7 +17,7 @@ const Header = (props) => {
                         </ul>
 
                         <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                            <input type="search" style={searchBox} className="searchBox, form-control form-control-dark" placeholder="Search..." ariaLabelledby="Search" />
+                            <input type="search" style={searchBox} className="searchBox, form-control form-control-dark" placeholder="Search..." aria-labelledby="Search" />
                         </form>
 
                         <div className="dropdown" style={IconPosition}>
@@ -27,7 +27,7 @@ const Header = (props) => {
                                 </svg>
                             </button>
 
-                            <ul className="dropdown-menu" ariaLabelledby="dropdownMenuButton1">
+                            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                 {/* <li><a href="/SignUp" className="dropdown-item" >Sign Up</a></li>
                                 <li><a href="/SignIn" className="dropdown-item" >Log In</a></li> */}
                                 <li><NavLink to="/SignUp" className="dropdown-item" >Sign Up</NavLink></li>
