@@ -1,4 +1,5 @@
-## This is a project developed by React. The web pages contain information on finding a variety of vacation rentals that is similar to Airbnb™. The web page displays all the data received from the database and provides sign-in and sign-up functions.
+## About The Project
+This is a project developed by React. The web pages contain information on finding a variety of vacation rentals that is similar to Airbnb™. The web page displays all the data received from the database and provides sign-in and sign-up functions.
 
 
 # Getting Started with Create React App
