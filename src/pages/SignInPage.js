@@ -14,14 +14,14 @@ const SignIn = () => {
         let isValidated = true
 
         // regex for check email format
-        // let emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        let emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
         // for email
         if (email === "") {
             // display this error message if email is null
             setErrorEmail("* Email cannot be empty")
             isValidated = false
-        } else if (!email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+        } else if (!email.match(emailFormat)) {
             // display this error message if email is not valid
             setErrorEmail("* Email is invalid")
             isValidated = false
