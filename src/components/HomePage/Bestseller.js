@@ -26,7 +26,7 @@ const Bestseller = () => {
       {/* Top choice Image */}
       <div style={divStyle}>
         <img src={'https://i.ibb.co/M5VmYxG/A-red-inked-rubber-stamp-on-a-transparent-background-with-a-blobby-grunge-texture-AI10-EPS-CMYK-colo.jpg'}
-          style={imgStyle} alt="top-choice-image"/>
+          style={imgStyle} alt="top-choice"/>
       </div>
 
       <div>

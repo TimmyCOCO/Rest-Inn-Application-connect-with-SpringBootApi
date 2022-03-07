@@ -63,7 +63,7 @@ const PropertyDesc = () => {
                 <div className="col-md-5">
                     <h4 className="my-2">Description
                         {/* embedded google map */}
-                        <iframe src={propertyDesc.mapSrc}
+                        <iframe src={propertyDesc.mapSrc} title="map_frame"
                             width="200" height="150" style={{ border: '0', float: 'right' }} allowFullScreen="" loading="lazy"></iframe>
                     </h4>
 

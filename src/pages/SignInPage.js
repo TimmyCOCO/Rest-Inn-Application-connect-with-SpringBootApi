@@ -14,7 +14,7 @@ const SignIn = () => {
         let isValidated = true
 
         // regex for check email format
-        let emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        let emailFormat = '/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/';
 
         // for email
         if (email === "") {
