@@ -9,7 +9,7 @@ const Header = (props) => {
                 <div className="container" >
 
                     <div className="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-                        <img src={'https://i.ibb.co/frxLqzs/logo.jpg'} style={imageStyle} />
+                        <img src={'https://i.ibb.co/frxLqzs/logo.jpg'} style={imageStyle} alt="logo" />
                         <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" style={fontStyle}>
                             <li><NavLink to="/" className="nav-link px-2 text-white">Home</NavLink></li>
                             <li><NavLink to="/PropertyList" className="nav-link px-2 text-white">Features</NavLink></li>
