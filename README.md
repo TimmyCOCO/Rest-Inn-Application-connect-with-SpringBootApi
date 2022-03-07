@@ -22,8 +22,8 @@ Those packages include:
 - [react-responsive-carousel](https://www.npmjs.com/package/react-responsive-carousel)
 - [react-router-dom](https://www.npmjs.com/package/react-router-dom)
 
-In the project directory, **copy this and run**:
-### `npm i bootstrap react-bootstrap react-icons react-responsive-carousel react-router-dom`
+In the project directory, run: 
+### `npm install` to install all packages.
 
 
 # json-server 
