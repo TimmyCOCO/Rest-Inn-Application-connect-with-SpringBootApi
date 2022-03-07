@@ -30,6 +30,8 @@ const PropertyDesc = () => {
     // get id from the url
     const { id } = useParams()
 
+    console.log(`${id}`)
+
     useEffect(() => {
         fetch(`http://localhost:2000/propertyList/${id}`)
             .then(res => res.json())
