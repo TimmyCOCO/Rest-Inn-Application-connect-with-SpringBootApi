@@ -16,7 +16,7 @@ const PropertyList = () => {
 
    // have no parameter got from URL, load all data
    useEffect(() => {
-      fetch("http://localhost:2000/propertyList")
+      fetch("https://fake-server-for-app.herokuapp.com/propertyList")
          .then(res => res.json())
          .then(json => {
             setPropertyItem(json)

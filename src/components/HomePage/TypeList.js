@@ -10,7 +10,7 @@ const TypeList = () => {
 
     // load FakeAPI data
     useEffect(() => {
-        fetch('http://localhost:2000/propertyType')
+        fetch('https://fake-server-for-app.herokuapp.com/propertyType')
             .then(res => res.json())
             .then(json => {
 

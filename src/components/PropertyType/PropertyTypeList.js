@@ -27,7 +27,7 @@ const PropertyTypeList = () => {
 
     // have parameter got from URL, load the specific data
     useEffect(() => {
-        fetch(`http://localhost:2000/propertyList?type=${type}`)
+        fetch(`https://fake-server-for-app.herokuapp.com/propertyList?type=${type}`)
             .then(res => res.json())
             .then(json => {
                 setPropertyItem(json)

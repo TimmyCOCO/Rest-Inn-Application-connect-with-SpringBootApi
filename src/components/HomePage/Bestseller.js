@@ -11,7 +11,7 @@ const Bestseller = () => {
   }])
 
   useEffect(() => {
-    fetch("http://localhost:2000/bestSeller")
+    fetch("https://fake-server-for-app.herokuapp.com/bestSeller")
       .then(res => res.json())
       .then(json => {
         setBestSellerItem(json)

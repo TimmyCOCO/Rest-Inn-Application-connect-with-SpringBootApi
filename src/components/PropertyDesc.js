@@ -31,7 +31,7 @@ const PropertyDesc = () => {
     const { id } = useParams()
 
     useEffect(() => {
-        fetch(`http://localhost:2000/propertyList/${id}`)
+        fetch(`https://fake-server-for-app.herokuapp.com/propertyList/${id}`)
             .then(res => res.json())
             .then(json => {
 
