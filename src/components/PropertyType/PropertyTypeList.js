@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
 import { useParams, useNavigate, Link } from 'react-router-dom'
@@ -20,17 +21,21 @@ const PropertyTypeList = () => {
     // for button to go back to the previous page
     const navigate = useNavigate()
 
-    const goBack = (e) => {
-        e.preventDefault()
-        navigate(-1)
-    }
-
     // have parameter got from URL, load the specific data
     useEffect(() => {
-        fetch(`https://fake-server-for-app.herokuapp.com/propertyList?type=${type}`)
-            .then(res => res.json())
-            .then(json => {
-                setPropertyItem(json)
+        // fetch(`https://fake-server-for-app.herokuapp.com/propertyList?type=${type}`)
+        //     .then(res => res.json())
+        //     .then(json => {
+        //         setPropertyItem(json)
+        //     })
+        //     .catch(err => {
+        //         console.log(`Error: ${err}`)
+        //     })
+
+        // using axios
+        axios(`https://fake-server-for-app.herokuapp.com/propertyList?type=${type}`)
+            .then(res => {
+                setPropertyItem(res.data)
             })
             .catch(err => {
                 console.log(`Error: ${err}`)
@@ -55,7 +60,7 @@ const PropertyTypeList = () => {
             }
 
             <button type="button" className="btn btn-dark" style={{ float: 'right' }}
-                onClick={goBack}>Go Back</button>
+                onClick={() => navigate(-1)}>Go Back</button>
 
         </div >
     )

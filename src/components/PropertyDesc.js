@@ -38,11 +38,14 @@ const PropertyDesc = () => {
         //         console.log(`Error ${err}`)
         //     })
 
-        // try to use axios
-        axios.get(`https://fake-server-for-app.herokuapp.com/propertyList/${id}`)
-        .then(res=>{
-            setPropertyDesc(res.data)
-        })
+        // using axios
+        axios(`https://fake-server-for-app.herokuapp.com/propertyList/${id}`)
+            .then(res => {
+                setPropertyDesc(res.data)
+            })
+            .catch(err => {
+                console.log(`Error ${err}`)
+            })
 
     }, [])
 

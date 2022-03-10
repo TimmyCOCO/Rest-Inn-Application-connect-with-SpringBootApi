@@ -72,26 +72,6 @@ const SignUp = () => {
       setErrorPassword('')
     }
 
-    // write data into server
-    // fetch('http://localhost:2000/user', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   },
-    //   body: JSON.stringify({
-    //     "firstName": firstName,
-    //     "lastName": lastName,
-    //     "email": email,
-    //     "password": password
-    //   })
-    // })
-    // .then(res => {
-    //   return res.json()
-    // })
-    // .then(data => console.log(data))
-    // .catch(err => console.log(`Error ${err}`))
-
-
     return isValidated
   }
 
@@ -158,23 +138,59 @@ const SignUp = () => {
 
                           // using axios
                           // if form is valid, then write data into server
-                          axios({
-                            url: 'http://localhost:2000/user', 
-                            method: 'POST',
-                            data: {
-                              "firstName": firstName,
-                              "lastName": lastName,
-                              "email": email,
-                              "password": password
-                            },
-                          }).then(() =>
-                            // if success in signup, then redirect to sign in page
-                            navigate('/SignIn')
-                          )
+                          // axios({
+                          //   url: 'http://localhost:2000/user',
+                          //   method: 'POST',
+                          //   data: {
+                          //     "firstName": firstName,
+                          //     "lastName": lastName,
+                          //     "email": email,
+                          //     "password": password
+                          //   }
+                          // })
+                          //   .then(() => alert('Sign up successfully, please log in'))
+                          //   .catch(err => console.log(`Error ${err}`))
+
+
+                          axios.post('http://localhost:2000/user', {
+                            "firstName": firstName,
+                            "lastName": lastName,
+                            "email": email,
+                            "password": password
+                          })
+                            .then(() => alert('Sign up successfully, please log in'))
+                            .catch(err => console.log(`Error ${err}`))
+
+                          // if success in signup, then redirect to sign in page
+                          navigate('/SignIn')
+
                         } else {
-                          alert('error')
+                          alert('Error occurs')
                         }
-                      }} >
+
+                        // Fetch APIs
+                        // write data into server
+                        // fetch('http://localhost:2000/user', {
+                        //   method: 'POST',
+                        //   headers: {
+                        //     'Content-Type': 'application/json'
+                        //   },
+                        //   body: JSON.stringify({
+                        //     "firstName": firstName,
+                        //     "lastName": lastName,
+                        //     "email": email,
+                        //     "password": password
+                        //   })
+                        // })
+                        // .then(res => {
+                        //   return res.json()
+                        // })
+                        // .then(data => console.log(data))
+                        // .catch(err => console.log(`Error ${err}`))
+
+                      }
+                      }
+                    >
 
                       Sign Up
                     </button>
@@ -192,7 +208,7 @@ const SignUp = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   )
 }
 
