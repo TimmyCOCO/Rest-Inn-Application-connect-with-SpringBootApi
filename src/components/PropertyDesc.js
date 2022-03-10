@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 
 import { useParams, useNavigate } from 'react-router-dom'
 
+import axios from 'axios'
+
 import { FaStar } from "react-icons/fa";
 
 const PropertyDesc = () => {
@@ -26,15 +28,22 @@ const PropertyDesc = () => {
     const { id } = useParams()
 
     useEffect(() => {
-        fetch(`https://fake-server-for-app.herokuapp.com/propertyList/${id}`)
-            .then(res => res.json())
-            .then(json => {
+        // fetch(`https://fake-server-for-app.herokuapp.com/propertyList/${id}`)
+        //     .then(res => res.json())
+        //     .then(json => {
 
-                setPropertyDesc(json);
-            })
-            .catch(err => {
-                console.log(`Error ${err}`)
-            })
+        //         setPropertyDesc(json);
+        //     })
+        //     .catch(err => {
+        //         console.log(`Error ${err}`)
+        //     })
+
+        // try to use axios
+        axios.get(`https://fake-server-for-app.herokuapp.com/propertyList/${id}`)
+        .then(res=>{
+            setPropertyDesc(res.data)
+        })
+
     }, [])
 
     return (
