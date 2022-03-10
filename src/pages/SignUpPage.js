@@ -75,6 +75,54 @@ const SignUp = () => {
     return isValidated
   }
 
+  const submitForm = () => {
+    // using axios
+    // if form is valid, then write data into server
+    // axios({
+    //   url: 'http://localhost:2000/user',
+    //   method: 'POST',
+    //   data: {
+    //     "firstName": firstName,
+    //     "lastName": lastName,
+    //     "email": email,
+    //     "password": password
+    //   }
+    // })
+    //   .then(() => alert('Sign up successfully, please log in'))
+    //   .catch(err => console.log(`Error ${err}`))
+    
+    // let test_url = 'http://localhost:2000/user'
+    let url = 'https://fake-server-for-app.herokuapp.com/user'
+    
+    axios.post(url, {
+      "firstName": firstName,
+      "lastName": lastName,
+      "email": email,
+      "password": password
+    })
+      .then(() => alert('Sign up successfully, please log in'))
+      .catch(err => console.log(`Error ${err}`))
+
+    // Fetch APIs
+    // write data into server
+    // fetch('http://localhost:2000/user', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify({
+    //     "firstName": firstName,
+    //     "lastName": lastName,
+    //     "email": email,
+    //     "password": password
+    //   })
+    // })
+    // .then(res => {
+    //   return res.json()
+    // })
+    // .then(data => console.log(data))
+    // .catch(err => console.log(`Error ${err}`))
+  }
 
   return (
     <section className="vh-100 gradient-custom">
@@ -135,63 +183,16 @@ const SignUp = () => {
                     <button className="btn btn-outline-light btn-lg px-5" type="button"
                       onClick={() => {
                         if (validate()) {
-
-                          // using axios
-                          // if form is valid, then write data into server
-                          // axios({
-                          //   url: 'http://localhost:2000/user',
-                          //   method: 'POST',
-                          //   data: {
-                          //     "firstName": firstName,
-                          //     "lastName": lastName,
-                          //     "email": email,
-                          //     "password": password
-                          //   }
-                          // })
-                          //   .then(() => alert('Sign up successfully, please log in'))
-                          //   .catch(err => console.log(`Error ${err}`))
-
-
-                          axios.post('http://localhost:2000/user', {
-                            "firstName": firstName,
-                            "lastName": lastName,
-                            "email": email,
-                            "password": password
-                          })
-                            .then(() => alert('Sign up successfully, please log in'))
-                            .catch(err => console.log(`Error ${err}`))
-
+                          // call to submit the sign up form
+                          submitForm()
+                          
                           // if success in signup, then redirect to sign in page
                           navigate('/SignIn')
-
                         } else {
                           alert('Error occurs')
                         }
-
-                        // Fetch APIs
-                        // write data into server
-                        // fetch('http://localhost:2000/user', {
-                        //   method: 'POST',
-                        //   headers: {
-                        //     'Content-Type': 'application/json'
-                        //   },
-                        //   body: JSON.stringify({
-                        //     "firstName": firstName,
-                        //     "lastName": lastName,
-                        //     "email": email,
-                        //     "password": password
-                        //   })
-                        // })
-                        // .then(res => {
-                        //   return res.json()
-                        // })
-                        // .then(data => console.log(data))
-                        // .catch(err => console.log(`Error ${err}`))
-
-                      }
-                      }
+                      }}
                     >
-
                       Sign Up
                     </button>
 
@@ -211,5 +212,6 @@ const SignUp = () => {
     </section >
   )
 }
+
 
 export default SignUp
