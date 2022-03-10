@@ -26,7 +26,7 @@ In the project directory, run:
 ### `npm install` to install all packages.
 
 
-# json-server 
+# json-server (this one is only for development purpose, not for final production)
 This project also requires to install [json-server](https://www.npmjs.com/package/json-server). json-server must be started when starting the web application
 
 In the project directory, run:

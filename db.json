@@ -1,224 +1,231 @@
 {
-    "propertyType": [
-        {
-            "id": 1,
-            "type": "Resort",
-            "image": "https://i.ibb.co/qC0yrcm/resort.jpg"
-        },
-        {
-            "id": 2,
-            "type": "Apartment",
-            "image": "https://i.ibb.co/sv4KL7H/apartment.jpg"
-        },
-        {
-            "id": 3,
-            "type": "Hotel",
-            "image": "https://i.ibb.co/N6kLJ9x/hotel.jpg"
-        },
-        {
-            "id": 4,
-            "type": "Motel",
-            "image": "https://i.ibb.co/ZTJTxZy/motel.jpg"
-        }
-    ],
-    "bestSeller": [
-        {
-            "id": 1001,
-            "location": "Quebec City, Quebec",
-            "price": 225,
-            "image": "https://i.ibb.co/2PfDNNV/quebec.jpg"
-        },
-        {
-            "id": 1002,
-            "location": "Halifax, Nova Scotia",
-            "price": 92,
-            "image": "https://i.ibb.co/n10NkJ6/halifax.jpg"
-        },
-        {
-            "id": 1003,
-            "location": "South Island, New Zealand",
-            "price": 240,
-            "image": "https://i.ibb.co/0Q2fXrW/south-island.jpg"
-        },
-        {
-            "id": 1004,
-            "location": "Rome, Italy",
-            "price": 250,
-            "image": "https://i.ibb.co/JFsXYjC/rome.jpg"
-        },
-        {
-            "id": 1005,
-            "location": "Phuket, Thailand",
-            "price": 80,
-            "image": "https://i.ibb.co/vj8B9mL/grand-deluxe-pool-access.jpg"
-        },
-        {
-            "id": 1006,
-            "location": "Phuket, Thailand",
-            "price": 100,
-            "image": "https://i.ibb.co/4NS2PsX/phuket.jpg"
-        }
-    ],
-    "propertyList": [
-        {
-            "id": 2001,
-            "title": "Quebec City Castle",
-            "price": 225,
-            "type": "Hotel",
-            "location": "Quebec City, Quebec",
-            "img": "https://i.ibb.co/2PfDNNV/quebec.jpg",
-            "isBestSeller": true,
-            "desc": "Living in the castle",
-            "amenities": [
-                "Pool",
-                "Free Parking",
-                "Restaurant",
-                "Bar",
-                "KTV"
-            ],
-            "rules": "Follow the rules of COVID-19",
-            "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2730.6087627296047!2d-71.20741244866329!3d46.81201215041734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb895dc6bfd5ced%3A0xe1f8bb36daa428d!2sFairmont%20Le%20Ch%C3%A2teau%20Frontenac!5e0!3m2!1sen!2sca!4v1646367010203!5m2!1sen!2sca"
-        },
-        {
-            "id": 2002,
-            "title": "One-Night Rest In Halifax",
-            "price": 92,
-            "type": "Motel",
-            "location": "Halifax, Nova Scotia",
-            "img": "https://i.ibb.co/n10NkJ6/halifax.jpg",
-            "isBestSeller": true,
-            "desc": "Graceful surrounding for taking a rest",
-            "amenities": [
-                "Free Parking",
-                "Restaurant"
-            ],
-            "rules": "Follow the rules of COVID-19",
-            "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d90834.57456771658!2d-63.70345214917653!3d44.64649113455813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b5a200386d80923%3A0x85ad1569a3b6b2a0!2sStardust%20Motel!5e0!3m2!1sen!2sca!4v1646367942964!5m2!1sen!2sca"
-        },
-        {
-            "id": 2003,
-            "title": "Near-Sea Resort",
-            "price": 240,
-            "type": "Resort",
-            "location": "South Island, New Zealand",
-            "img": "https://i.ibb.co/0Q2fXrW/south-island.jpg",
-            "isBestSeller": true,
-            "desc": "Facing the sea and enjoy the sea breeze",
-            "amenities": [
-                "Free Parking",
-                "Restaurant",
-                "Bar",
-                "Coast"
-            ],
-            "rules": "Follow the rules of COVID-19",
-            "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335255.973188404!2d172.20236145682884!3d-35.278990199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0bbac4d37417a1%3A0x15f27fc7b07f389e!2sPaihia%20Beach%20Resort%20%26%20Spa!5e0!3m2!1sen!2sca!4v1646368536657!5m2!1sen!2sca"
-        },
-        {
-            "id": 2004,
-            "title": "Holiday Motel in Colorado",
-            "price": 121,
-            "type": "Motel",
-            "location": "Grand Lake, Colorado, United State",
-            "img": "https://i.ibb.co/ckLGHtV/Queen-Motel.jpg",
-            "isBestSeller": false,
-            "desc": "have a good night after you travel to here",
-            "amenities": [
-                "Pool",
-                "Free Parking",
-                "Restaurant",
-                "Bar"
-            ],
-            "rules": "Follow the rules of COVID-19",
-            "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97558.07074141152!2d-105.95511624471959!3d40.17146176819341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8769819bdd372c9b%3A0xe7be482f65537439!2sSpirit%20Lake%20Lodge!5e0!3m2!1sen!2sca!4v1646368103755!5m2!1sen!2sca"
-        },
-        {
-            "id": 2005,
-            "title": "Have a Luxurious Night",
-            "price": 592,
-            "type": "Hotel",
-            "location": "Dubai, United Arab Emirates",
-            "img": "https://i.ibb.co/7SVGkhh/0x0.jpg",
-            "isBestSeller": false,
-            "desc": "Living higher and overlooking the city",
-            "amenities": [
-                "Pool",
-                "Free Parking",
-                "Restaurant",
-                "Bar"
-            ],
-            "rules": "Follow the rules of COVID-19",
-            "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115531.87611858622!2d55.1924909647419!3d25.19070382146268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f4292f9132cbd%3A0x653a96f2ced0a490!2sJumeirah%20Emirates%20Towers!5e0!3m2!1sen!2sca!4v1646368143631!5m2!1sen!2sca"
-        },
-        {
-            "id": 2006,
-            "title": "A Normal Day and Night",
-            "price": 120,
-            "type": "Apartment",
-            "location": "Chicago, United State",
-            "img": "https://i.ibb.co/D7ZTpbq/chicago.jpg",
-            "isBestSeller": false,
-            "desc": "Living in downtown with convenient transportation",
-            "amenities": [
-                "Free Parking",
-                "Restaurant",
-                "Bar"
-            ],
-            "rules": "Follow the rules of COVID-19",
-            "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95057.8917581921!2d-87.69611780278443!3d41.88083122905703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c851171f12f%3A0xb4c7472e9805edc1!2s1401%20S.%20State%20Apartments!5e0!3m2!1sen!2sca!4v1646368203344!5m2!1sen!2sca"
-        },
-        {
-            "id": 2007,
-            "title": "Renaissance Party",
-            "price": 250,
-            "type": "Apartment",
-            "location": "Rome, Italy",
-            "img": "https://i.ibb.co/JFsXYjC/rome.jpg",
-            "isBestSeller": true,
-            "desc": "Nice atmosphere that you can enjoy",
-            "amenities": [
-                "Free Parking",
-                "Restaurant",
-                "Park"
-            ],
-            "rules": "Follow the rules of COVID-19",
-            "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23757.117082013665!2d12.46810105836278!3d41.90060655585766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6044d58a8799%3A0x3abe10dea411b6c2!2sLuxury%20Apartment%20piazza%20Navona!5e0!3m2!1sen!2sca!4v1646368242597!5m2!1sen!2sca"
-        },
-        {
-            "id": 2008,
-            "title": "Coast Resort",
-            "price": 80,
-            "type": "Resort",
-            "location": "Phuket, Thailand",
-            "img": "https://i.ibb.co/vj8B9mL/grand-deluxe-pool-access.jpg"
-           ,
-            "isBestSeller": true,
-            "desc": "Near the coast, go whenever you want",
-            "amenities": [
-                "Free Parking",
-                "Restaurant",
-                "Bar",
-                "Coast"
-            ],
-            "rules": "Follow the rules of COVID-19",
-            "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252861.72121690903!2d98.20936181873567!3d8.002608977854097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3050256ff5a48105%3A0xa897e8b4f65f84ef!2sParadox%20Resort%20Phuket!5e0!3m2!1sen!2sca!4v1646368275525!5m2!1sen!2sca"
-        },
-        {
-            "id": 2009,
-            "title": "Enjoy Sunshine in Phuket",
-            "price": 100,
-            "type": "Resort",
-            "location": "Phuket, Thailand",
-            "img":  "https://i.ibb.co/4NS2PsX/phuket.jpg",
-            "isBestSeller": true,
-            "desc": "bright room with sunshine, and face the sea",
-            "amenities": [
-                "Free Parking",
-                "Restaurant",
-                "Coast"
-            ],
-            "rules": "Follow the rules of COVID-19",
-            "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252875.8523283583!2d98.25316392629321!3d7.979801084842087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3051cbdea5646931%3A0x547121868c70dc41!2sSanthiya%20Koh%20Yao%20Yai!5e0!3m2!1sen!2sca!4v1646369190958!5m2!1sen!2sca"
-        }
-       
-    ]
+  "user": [
+    {
+      "firstName": "admin",
+      "lastName": "admin",
+      "email": "admin@gmail.com",
+      "password": "password",
+      "id": 1
+    }
+  ],
+  "propertyType": [
+    {
+      "id": 1,
+      "type": "Resort",
+      "image": "https://i.ibb.co/qC0yrcm/resort.jpg"
+    },
+    {
+      "id": 2,
+      "type": "Apartment",
+      "image": "https://i.ibb.co/sv4KL7H/apartment.jpg"
+    },
+    {
+      "id": 3,
+      "type": "Hotel",
+      "image": "https://i.ibb.co/N6kLJ9x/hotel.jpg"
+    },
+    {
+      "id": 4,
+      "type": "Motel",
+      "image": "https://i.ibb.co/ZTJTxZy/motel.jpg"
+    }
+  ],
+  "bestSeller": [
+    {
+      "id": 1001,
+      "location": "Quebec City, Quebec",
+      "price": 225,
+      "image": "https://i.ibb.co/2PfDNNV/quebec.jpg"
+    },
+    {
+      "id": 1002,
+      "location": "Halifax, Nova Scotia",
+      "price": 92,
+      "image": "https://i.ibb.co/n10NkJ6/halifax.jpg"
+    },
+    {
+      "id": 1003,
+      "location": "South Island, New Zealand",
+      "price": 240,
+      "image": "https://i.ibb.co/0Q2fXrW/south-island.jpg"
+    },
+    {
+      "id": 1004,
+      "location": "Rome, Italy",
+      "price": 250,
+      "image": "https://i.ibb.co/JFsXYjC/rome.jpg"
+    },
+    {
+      "id": 1005,
+      "location": "Phuket, Thailand",
+      "price": 80,
+      "image": "https://i.ibb.co/vj8B9mL/grand-deluxe-pool-access.jpg"
+    },
+    {
+      "id": 1006,
+      "location": "Phuket, Thailand",
+      "price": 100,
+      "image": "https://i.ibb.co/4NS2PsX/phuket.jpg"
+    }
+  ],
+  "propertyList": [
+    {
+      "id": 2001,
+      "title": "Quebec City Castle",
+      "price": 225,
+      "type": "Hotel",
+      "location": "Quebec City, Quebec",
+      "img": "https://i.ibb.co/2PfDNNV/quebec.jpg",
+      "isBestSeller": true,
+      "desc": "Living in the castle",
+      "amenities": [
+        "Pool",
+        "Free Parking",
+        "Restaurant",
+        "Bar",
+        "KTV"
+      ],
+      "rules": "Follow the rules of COVID-19",
+      "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2730.6087627296047!2d-71.20741244866329!3d46.81201215041734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb895dc6bfd5ced%3A0xe1f8bb36daa428d!2sFairmont%20Le%20Ch%C3%A2teau%20Frontenac!5e0!3m2!1sen!2sca!4v1646367010203!5m2!1sen!2sca"
+    },
+    {
+      "id": 2002,
+      "title": "One-Night Rest In Halifax",
+      "price": 92,
+      "type": "Motel",
+      "location": "Halifax, Nova Scotia",
+      "img": "https://i.ibb.co/n10NkJ6/halifax.jpg",
+      "isBestSeller": true,
+      "desc": "Graceful surrounding for taking a rest",
+      "amenities": [
+        "Free Parking",
+        "Restaurant"
+      ],
+      "rules": "Follow the rules of COVID-19",
+      "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d90834.57456771658!2d-63.70345214917653!3d44.64649113455813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b5a200386d80923%3A0x85ad1569a3b6b2a0!2sStardust%20Motel!5e0!3m2!1sen!2sca!4v1646367942964!5m2!1sen!2sca"
+    },
+    {
+      "id": 2003,
+      "title": "Near-Sea Resort",
+      "price": 240,
+      "type": "Resort",
+      "location": "South Island, New Zealand",
+      "img": "https://i.ibb.co/0Q2fXrW/south-island.jpg",
+      "isBestSeller": true,
+      "desc": "Facing the sea and enjoy the sea breeze",
+      "amenities": [
+        "Free Parking",
+        "Restaurant",
+        "Bar",
+        "Coast"
+      ],
+      "rules": "Follow the rules of COVID-19",
+      "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335255.973188404!2d172.20236145682884!3d-35.278990199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0bbac4d37417a1%3A0x15f27fc7b07f389e!2sPaihia%20Beach%20Resort%20%26%20Spa!5e0!3m2!1sen!2sca!4v1646368536657!5m2!1sen!2sca"
+    },
+    {
+      "id": 2004,
+      "title": "Holiday Motel in Colorado",
+      "price": 121,
+      "type": "Motel",
+      "location": "Grand Lake, Colorado, United State",
+      "img": "https://i.ibb.co/ckLGHtV/Queen-Motel.jpg",
+      "isBestSeller": false,
+      "desc": "have a good night after you travel to here",
+      "amenities": [
+        "Pool",
+        "Free Parking",
+        "Restaurant",
+        "Bar"
+      ],
+      "rules": "Follow the rules of COVID-19",
+      "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97558.07074141152!2d-105.95511624471959!3d40.17146176819341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8769819bdd372c9b%3A0xe7be482f65537439!2sSpirit%20Lake%20Lodge!5e0!3m2!1sen!2sca!4v1646368103755!5m2!1sen!2sca"
+    },
+    {
+      "id": 2005,
+      "title": "Have a Luxurious Night",
+      "price": 592,
+      "type": "Hotel",
+      "location": "Dubai, United Arab Emirates",
+      "img": "https://i.ibb.co/7SVGkhh/0x0.jpg",
+      "isBestSeller": false,
+      "desc": "Living higher and overlooking the city",
+      "amenities": [
+        "Pool",
+        "Free Parking",
+        "Restaurant",
+        "Bar"
+      ],
+      "rules": "Follow the rules of COVID-19",
+      "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115531.87611858622!2d55.1924909647419!3d25.19070382146268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f4292f9132cbd%3A0x653a96f2ced0a490!2sJumeirah%20Emirates%20Towers!5e0!3m2!1sen!2sca!4v1646368143631!5m2!1sen!2sca"
+    },
+    {
+      "id": 2006,
+      "title": "A Normal Day and Night",
+      "price": 120,
+      "type": "Apartment",
+      "location": "Chicago, United State",
+      "img": "https://i.ibb.co/D7ZTpbq/chicago.jpg",
+      "isBestSeller": false,
+      "desc": "Living in downtown with convenient transportation",
+      "amenities": [
+        "Free Parking",
+        "Restaurant",
+        "Bar"
+      ],
+      "rules": "Follow the rules of COVID-19",
+      "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95057.8917581921!2d-87.69611780278443!3d41.88083122905703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c851171f12f%3A0xb4c7472e9805edc1!2s1401%20S.%20State%20Apartments!5e0!3m2!1sen!2sca!4v1646368203344!5m2!1sen!2sca"
+    },
+    {
+      "id": 2007,
+      "title": "Renaissance Party",
+      "price": 250,
+      "type": "Apartment",
+      "location": "Rome, Italy",
+      "img": "https://i.ibb.co/JFsXYjC/rome.jpg",
+      "isBestSeller": true,
+      "desc": "Nice atmosphere that you can enjoy",
+      "amenities": [
+        "Free Parking",
+        "Restaurant",
+        "Park"
+      ],
+      "rules": "Follow the rules of COVID-19",
+      "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23757.117082013665!2d12.46810105836278!3d41.90060655585766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6044d58a8799%3A0x3abe10dea411b6c2!2sLuxury%20Apartment%20piazza%20Navona!5e0!3m2!1sen!2sca!4v1646368242597!5m2!1sen!2sca"
+    },
+    {
+      "id": 2008,
+      "title": "Coast Resort",
+      "price": 80,
+      "type": "Resort",
+      "location": "Phuket, Thailand",
+      "img": "https://i.ibb.co/vj8B9mL/grand-deluxe-pool-access.jpg",
+      "isBestSeller": true,
+      "desc": "Near the coast, go whenever you want",
+      "amenities": [
+        "Free Parking",
+        "Restaurant",
+        "Bar",
+        "Coast"
+      ],
+      "rules": "Follow the rules of COVID-19",
+      "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252861.72121690903!2d98.20936181873567!3d8.002608977854097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3050256ff5a48105%3A0xa897e8b4f65f84ef!2sParadox%20Resort%20Phuket!5e0!3m2!1sen!2sca!4v1646368275525!5m2!1sen!2sca"
+    },
+    {
+      "id": 2009,
+      "title": "Enjoy Sunshine in Phuket",
+      "price": 100,
+      "type": "Resort",
+      "location": "Phuket, Thailand",
+      "img": "https://i.ibb.co/4NS2PsX/phuket.jpg",
+      "isBestSeller": true,
+      "desc": "bright room with sunshine, and face the sea",
+      "amenities": [
+        "Free Parking",
+        "Restaurant",
+        "Coast"
+      ],
+      "rules": "Follow the rules of COVID-19",
+      "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252875.8523283583!2d98.25316392629321!3d7.979801084842087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3051cbdea5646931%3A0x547121868c70dc41!2sSanthiya%20Koh%20Yao%20Yai!5e0!3m2!1sen!2sca!4v1646369190958!5m2!1sen!2sca"
+    }
+  ]
 }

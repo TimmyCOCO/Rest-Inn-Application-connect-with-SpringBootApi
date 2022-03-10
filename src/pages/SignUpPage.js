@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const SignUp = () => {
   const [firstName, setFirstName] = useState('')
@@ -12,6 +12,9 @@ const SignUp = () => {
   const [errorLastName, setErrorLastName] = useState('')
   const [errorEmail, setErrorEmail] = useState('')
   const [errorPassword, setErrorPassword] = useState('')
+
+  // for redirect to other page
+  const navigate = useNavigate();
 
   // validate form
   const validate = () => {
@@ -68,6 +71,25 @@ const SignUp = () => {
       setErrorPassword('')
     }
 
+    // write data into server
+    fetch('http://localhost:2000/user', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        "firstName": firstName,
+        "lastName": lastName,
+        "email": email,
+        "password": password
+      })
+    })
+    // .then(res => {
+    //   return res.json()
+    // })
+    // .then(data => console.log(data))
+    // .catch(err => console.log(`Error ${err}`))
+
     return isValidated
   }
 
@@ -85,7 +107,7 @@ const SignUp = () => {
                   <h2 className="fw-bold mb-2 text-uppercase">Sign Up Now</h2>
                   <p className="text-white-50 mb-5">Please register your account</p>
 
-                  <form method='POST'>
+                  <form>
                     <div className="form-outline form-white mb-4">
                       <label className="form-label" htmlFor="typeFirstName">First Name</label>
                       <input type="text" id="typeFirstName" className="form-control form-control-lg"
@@ -132,6 +154,10 @@ const SignUp = () => {
                       onClick={() => {
                         if (validate()) {
                           alert('success')
+
+                          // if success in signup, then redirect to sign in page
+                          navigate('/SignIn')
+
                         } else {
                           alert('error')
                         }

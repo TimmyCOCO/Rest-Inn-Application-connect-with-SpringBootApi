@@ -23,13 +23,12 @@ function App() {
           <Routes>
 
             <Route exact path='/' element={<HomePage />} />
-
             <Route path='/SignUp' element={<SignUpPage />} />
             <Route path='/SignIn' element={<SignInPage />} />
 
-            
             {/* display all properties */}
             <Route exact path='/PropertyList' element={<PropertyListPage />} />
+
             {/* display the specific type of properties */}
             <Route path='/PropertyType/:type' element={<PropertyTypePage />} />
             

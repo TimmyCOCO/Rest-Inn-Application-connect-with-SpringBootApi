@@ -22,11 +22,6 @@ const PropertyDesc = () => {
     // for button to go back to the previous page
     const navigate = useNavigate()
 
-    const goBack = (e) => {
-        e.preventDefault()
-        navigate(-1)
-    }
-
     // get id from the url
     const { id } = useParams()
 
@@ -95,7 +90,7 @@ const PropertyDesc = () => {
 
 
             <button type="button" className="btn btn-dark" style={{ float: 'right' }}
-                onClick={goBack}>Go Back</button>
+                onClick={() => navigate(-1)}>Go Back</button>
 
 
         </div >
