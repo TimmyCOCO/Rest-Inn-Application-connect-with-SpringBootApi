@@ -1,24 +1,31 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useState } from 'react'
+import { NavLink, Link } from 'react-router-dom'
 
 const Header = (props) => {
+
+    const [searchItem, setSearchItem] = useState('')
+
     return (
         <div>
-
             <header className="p-3 bg-dark text-white" >
                 <div className="container" >
 
                     <div className="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
                         <img src={'https://i.ibb.co/frxLqzs/logo.jpg'} style={imageStyle} alt="logo" />
                         <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" style={fontStyle}>
-                            <li><NavLink to="/" className="nav-link px-2 text-white">Home</NavLink></li>
-                            <li><NavLink to="/PropertyList" className="nav-link px-2 text-white">Features</NavLink></li>
+                            <li><NavLink to="/" className="nav-link px-s text-white">Home</NavLink></li>
+                            <li><NavLink to="/PropertyList" className="nav-link px-3 text-white">Properties</NavLink></li>
 
                         </ul>
 
-                        <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                            <input type="search" style={searchBox} className="searchBox, form-control form-control-dark" placeholder="Search..." aria-labelledby="Search" />
+
+                        {/* <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                            <input type="text" style={searchBox} className="searchBox, form-control form-control-dark" placeholder="Search..." aria-labelledby="Search..."
+                                onChange={(event) => {
+                                    setSearchItem(event.target.value)
+                                }} />
                         </form>
+                        <Link to={`/PropertyType/${searchItem}`}><button style={{ searchButton }}>Search</button></Link> */}
 
                         <div className="dropdown" style={IconPosition}>
                             <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -28,8 +35,6 @@ const Header = (props) => {
                             </button>
 
                             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                {/* <li><a href="/SignUp" className="dropdown-item" >Sign Up</a></li>
-                                <li><a href="/SignIn" className="dropdown-item" >Log In</a></li> */}
                                 <li><NavLink to="/SignUp" className="dropdown-item" >Sign Up</NavLink></li>
                                 <li><NavLink to="/SignIn" className="dropdown-item" >Log In</NavLink></li>
                             </ul>
@@ -48,7 +53,8 @@ const imageStyle = {
     height: 60,
     width: 60,
     borderRadius: '50%',
-    position: 'absolute'
+    // position: 'absolute',
+    display: 'flex'
 }
 
 const IconPosition = {
@@ -65,6 +71,11 @@ const fontStyle = {
 
 const searchBox = {
     width: 150,
+}
+
+const searchButton = {
+    borderRadius: '50%',
+    backgroundColor: 'lightblue'
 }
 
 export default Header

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 import Header from "./components/Header"
 import HomePage from "./pages/HomePage"
@@ -9,11 +9,12 @@ import PropertyListPage from "./pages/PropertyListPage"
 import PropertyTypePage from './pages/PropertyTypePage'
 
 import PropertyDescPage from './pages/PropertyDescPage'
+import DashboardPage from './pages/DashboardPage'
 
 
 function App() {
 
-  // Functions
+  // const LoggedIn = true
 
   return (
     <div>
@@ -31,8 +32,13 @@ function App() {
 
             {/* display the specific type of properties */}
             <Route path='/PropertyType/:type' element={<PropertyTypePage />} />
-            
+
             <Route path="/PropertyDesc/:id" element={<PropertyDescPage />} />
+
+
+
+            {/* <Route path='/Dashboard' element={ LoggedIn ? <DashboardPage /> : <Navigate to='/SignIn' />} /> */}
+            <Route path='/Dashboard' element={<DashboardPage />} />
 
           </Routes>
         </Header>

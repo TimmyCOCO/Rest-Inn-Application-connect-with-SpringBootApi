@@ -91,8 +91,9 @@ const SignUp = () => {
     //   .then(() => alert('Sign up successfully, please log in'))
     //   .catch(err => console.log(`Error ${err}`))
     
-    // let test_url = 'http://localhost:2000/user'
-    let url = 'https://fake-server-for-app.herokuapp.com/user'
+
+    // const url = 'https://fake-server-for-app.herokuapp.com/user'
+    const url = 'http://localhost:8080/customers'
     
     axios.post(url, {
       "firstName": firstName,

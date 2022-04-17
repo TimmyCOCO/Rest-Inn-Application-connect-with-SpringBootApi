@@ -5,7 +5,7 @@ import BestSellerItem from './BestSellerItem'
 const Bestseller = () => {
 
   const [bestSellerItem, setBestSellerItem] = useState([{
-    id: 0,
+    id: '',
     location: '',
     price: 0,
     image: null
@@ -21,8 +21,11 @@ const Bestseller = () => {
     //     console.log(`Error: ${err}`)
     //   })
 
+
+    // const url = "https://fake-server-for-app.herokuapp.com/bestSeller"
+    const url = "http://localhost:8080/entities/bestSeller?isBestSeller=true"
     // using axios
-    axios("https://fake-server-for-app.herokuapp.com/bestSeller")
+    axios(url)
       .then(res => {
         setBestSellerItem(res.data)
       })

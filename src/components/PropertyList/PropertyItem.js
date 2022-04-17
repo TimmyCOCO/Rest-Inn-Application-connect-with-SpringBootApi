@@ -6,11 +6,11 @@ import { FaStar } from "react-icons/fa";
 const PropertyItem = (props) => {
 
     return (
-        <>
+        <>  
             <div className="row">
                 <div className="col-md-5" >
 
-                    <img className="img-fluid rounded mb-4 mb-md-0" src={props.img} alt="img" />
+                    <img className="img-fluid rounded mb-4 mb-md-0" src={props.image} alt="img" />
 
                 </div>
 

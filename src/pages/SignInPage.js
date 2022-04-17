@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import axios from 'axios'
+import React, { useContext, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 const SignIn = () => {
     const [email, setEmail] = useState('')
@@ -8,6 +9,8 @@ const SignIn = () => {
     // error message
     const [errorEmail, setErrorEmail] = useState('')
     const [errorPassword, setErrorPassword] = useState('')
+
+    const navigate = useNavigate()
 
     // validate form
     const validate = () => {
@@ -51,6 +54,23 @@ const SignIn = () => {
         return isValidated
     }
 
+    const submitForm = () => {
+        const url = 'http://localhost:8080/auth'
+
+        axios.post(url, {
+            "email": email,
+            "password": password
+        })
+            .then(() => {
+                alert('Sign in successfully')
+                navigate('/Dashboard')
+            })
+            .catch(err => {
+                console.log(`Error ${err}`)
+                alert('Please check your email or password!')  // temporarily use
+            })
+    }
+
 
     return (
         <section className="vh-100 gradient-custom">
@@ -83,13 +103,16 @@ const SignIn = () => {
                                             <span>{errorPassword}</span>
                                         </div>
 
-                                        <p className="small mb-5 pb-lg-2"><a className="text-white-50" href="#!">Forgot password?</a></p>
+                                        <br />
+                                        {/* <p className="small mb-5 pb-lg-2"><a className="text-white-50" href="#!">Forgot password?</a></p> */}
 
                                         <button className="btn btn-outline-light btn-lg px-5" type="button"
                                             onClick={() => {
                                                 // when click the button, validate the input
                                                 if (validate()) {
-                                                    alert(' success')
+                                                    // submit after validation
+                                                    submitForm()
+
                                                 } else {
                                                     alert('error')
                                                 }

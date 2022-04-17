@@ -10,13 +10,13 @@ const PropertyDesc = () => {
     const [propertyDesc, setPropertyDesc] = useState({
         id: 0,
         title: "",
-        desc: "",
+        description: "",
         price: 0,
         type: "",
         rules: "",
-        amenities: [],
+        amenities: "",
         location: "",
-        img: null,
+        image: "",
         isBestSeller: false,
         mapSrc: ""
     })
@@ -38,8 +38,11 @@ const PropertyDesc = () => {
         //         console.log(`Error ${err}`)
         //     })
 
+        // const url =`https://fake-server-for-app.herokuapp.com/propertyList/${id}`
+        const url = `http://localhost:8080/entities/${id}`
+
         // using axios
-        axios(`https://fake-server-for-app.herokuapp.com/propertyList/${id}`)
+        axios(url)
             .then(res => {
                 setPropertyDesc(res.data)
             })
@@ -64,7 +67,7 @@ const PropertyDesc = () => {
             <div className="row">
 
                 <div className="col-md-7">
-                    <img className="img-fluid" src={propertyDesc.img} alt="" />
+                    <img className="img-fluid" src={propertyDesc.image} alt="" />
                 </div>
 
                 <div className="col-md-5">
@@ -74,7 +77,7 @@ const PropertyDesc = () => {
                             width="200" height="150" style={{ border: '0', float: 'right' }} allowFullScreen="" loading="lazy"></iframe>
                     </h4>
 
-                    <p>{propertyDesc.desc}</p>
+                    <p>{propertyDesc.description}</p>
                     <hr />
 
                     <p><span style={spanStyle}>Price:</span> <span style={{ fontSize: '40px' }}>${propertyDesc.price}</span></p>
@@ -82,15 +85,17 @@ const PropertyDesc = () => {
                     <p><span style={spanStyle}>Type:</span> {propertyDesc.type}</p>
                     <p><span style={spanStyle}>Location:</span> {propertyDesc.location}</p>
 
-                    <span style={spanStyle}>Amenities:</span>
-                    <ul >
-                        {/* display each item in the array */}
+                    <p><span style={spanStyle}>Amenities:</span> {propertyDesc.amenities}</p>
+
+                    {/* display each item in the array */}
+                    {/* <ul >
+                        
                         {propertyDesc.amenities.map((amenity, index) => (
 
                             <li key={index}>{amenity}</li>
 
                         ))}
-                    </ul>
+                    </ul> */}
 
                     <p><span style={spanStyle}>Rules:</span> {propertyDesc.rules}</p>
                 </div>
