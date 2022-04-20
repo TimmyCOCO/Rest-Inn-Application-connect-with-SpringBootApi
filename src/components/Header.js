@@ -1,9 +1,6 @@
-import React, { useState } from 'react'
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Header = (props) => {
-
-    const [searchItem, setSearchItem] = useState('')
 
     return (
         <div>
@@ -17,7 +14,6 @@ const Header = (props) => {
                             <li><NavLink to="/PropertyList" className="nav-link px-3 text-white">Properties</NavLink></li>
 
                         </ul>
-
 
                         {/* <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
                             <input type="text" style={searchBox} className="searchBox, form-control form-control-dark" placeholder="Search..." aria-labelledby="Search..."
@@ -35,6 +31,7 @@ const Header = (props) => {
                             </button>
 
                             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><NavLink to="/Dashboard" className="dropdown-item" >Dashboard</NavLink></li>
                                 <li><NavLink to="/SignUp" className="dropdown-item" >Sign Up</NavLink></li>
                                 <li><NavLink to="/SignIn" className="dropdown-item" >Log In</NavLink></li>
                             </ul>
@@ -69,14 +66,14 @@ const fontStyle = {
     fontWeight: 'bold',
 }
 
-const searchBox = {
-    width: 150,
-}
+// const searchBox = {
+//     width: 150,
+// }
 
-const searchButton = {
-    borderRadius: '50%',
-    backgroundColor: 'lightblue'
-}
+// const searchButton = {
+//     borderRadius: '50%',
+//     backgroundColor: 'lightblue'
+// }
 
 export default Header
 

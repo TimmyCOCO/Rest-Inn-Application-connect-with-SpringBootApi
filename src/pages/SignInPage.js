@@ -1,6 +1,10 @@
-import axios from 'axios'
-import React, { useContext, useState } from 'react'
+
+import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+
+import { useDispatch, useSelector } from 'react-redux'
+import { loginUser } from '../redux/apiCall'
+
 
 const SignIn = () => {
     const [email, setEmail] = useState('')
@@ -11,6 +15,16 @@ const SignIn = () => {
     const [errorPassword, setErrorPassword] = useState('')
 
     const navigate = useNavigate()
+
+    // Redux
+    const dispatch = useDispatch()
+
+    const { error } = useSelector((state) => state.user)
+
+    const handleLogin = () => {
+        loginUser({ email, password }, dispatch)
+
+    }
 
     // validate form
     const validate = () => {
@@ -54,24 +68,6 @@ const SignIn = () => {
         return isValidated
     }
 
-    const submitForm = () => {
-        const url = 'http://localhost:8080/auth'
-
-        axios.post(url, {
-            "email": email,
-            "password": password
-        })
-            .then(() => {
-                alert('Sign in successfully')
-                navigate('/Dashboard')
-            })
-            .catch(err => {
-                console.log(`Error ${err}`)
-                alert('Please check your email or password!')  // temporarily use
-            })
-    }
-
-
     return (
         <section className="vh-100 gradient-custom">
             <div className="container py-5 h-100">
@@ -88,7 +84,7 @@ const SignIn = () => {
                                         <div className="form-outline form-white mb-4">
                                             <label className="form-label" htmlFor="typeEmailX">Email</label>
                                             <input type="text" id="typeEmailX" className="form-control form-control-lg"
-                                                value={email} onChange={(event) => {
+                                                onChange={(event) => {
                                                     setEmail(event.target.value)
                                                 }} />
                                             <span>{errorEmail}</span>
@@ -97,26 +93,32 @@ const SignIn = () => {
                                         <div className="form-outline form-white mb-4">
                                             <label className="form-label" htmlFor="typePasswordX">Password</label>
                                             <input type="password" id="typePasswordX" className="form-control form-control-lg"
-                                                value={password} onChange={(event) => {
+                                                onChange={(event) => {
                                                     setPassword(event.target.value)
                                                 }} />
                                             <span>{errorPassword}</span>
                                         </div>
 
-                                        <br />
                                         {/* <p className="small mb-5 pb-lg-2"><a className="text-white-50" href="#!">Forgot password?</a></p> */}
+
+
+                                        {error && <span>Something wrong</span>}
+
+                                        <br /><br />
 
                                         <button className="btn btn-outline-light btn-lg px-5" type="button"
                                             onClick={() => {
                                                 // when click the button, validate the input
                                                 if (validate()) {
-                                                    // submit after validation
-                                                    submitForm()
+                                                    // submit after validation                                  
+                                                    handleLogin()
 
+                                                    navigate('/Dashboard')
                                                 } else {
                                                     alert('error')
                                                 }
                                             }}>
+
                                             Sign In</button>
 
 
@@ -133,7 +135,7 @@ const SignIn = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     )
 }
 

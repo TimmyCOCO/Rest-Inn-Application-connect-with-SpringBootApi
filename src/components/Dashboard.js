@@ -1,42 +1,15 @@
-import React, { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
-import axios from 'axios'
+import { Link } from 'react-router-dom'
+
+import { useDispatch, useSelector } from 'react-redux'
+import { logoutUser } from '../redux/apiCall'
+
 
 const Dashboard = () => {
 
-    const navigate = useNavigate()
+    // Redux
+    const dispatch = useDispatch()
+    const user = useSelector((state) => state.user.currentUser)
 
-    const [userInfo, setUserInfo] = useState(
-        {
-            id: '62548ec885e73f70c509c7cf',
-            email: 'user@email.com',
-            firstName: 'User',
-            lastName: 'Dear'
-        }
-    )
-
-    useEffect(() => {
-        const getInfo = async () => {
-            const url = `http://localhost:8080/customers/${userInfo.id}`
-
-            try {
-                const res = await axios(url)
-
-                setUserInfo(res.data)
-
-            } catch (err) {
-                console.log(`Error ${err}`)
-            }
-
-        }
-
-        getInfo()
-    }, [])
-
-    const logout = () => {
-        alert('You logged out')
-        navigate('/')
-    }
 
     return (
         <section className="vh-100 gradient-custom">
@@ -54,31 +27,20 @@ const Dashboard = () => {
                                     <form >
                                         <div className="form-outline mb-4">
                                             <label className="form-label text-white-50">Email</label>
-                                            <p>{userInfo.email}</p>
-
-
-                                        </div>
-
-                                        <div className="form-outline mb-4">
-                                            <label className="form-label text-white-50" >First Name</label>
-                                            <p>{userInfo.firstName}</p>
-
-
-                                        </div>
-
-                                        <div className="form-outline mb-4">
-                                            <label className="form-label text-white-50">Last Name</label>
-                                            <p>{userInfo.lastName}</p>
-
+                                            <p>{user.email}</p>
                                         </div>
 
                                         <br />
                                         {/* <p className="small mb-5 pb-lg-2"><a className="text-white-50" href="#!">Forgot password?</a></p> */}
 
-                                        <button className="btn btn-outline-light btn-lg px-5" type="button"
-                                            onClick={logout}
+                                        <Link to='/SignIn'><button className="btn btn-outline-light btn-lg px-5" type="button"
+                                            onClick={() => {
+                                                logoutUser(dispatch)
+                                                alert('you logged out')
+                                            }
+                                            }
                                         >
-                                            Log out</button>
+                                            Log out</button></Link>
 
 
                                     </form>

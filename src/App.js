@@ -11,11 +11,13 @@ import PropertyTypePage from './pages/PropertyTypePage'
 import PropertyDescPage from './pages/PropertyDescPage'
 import DashboardPage from './pages/DashboardPage'
 
+import { useSelector } from 'react-redux'
 
 function App() {
 
-  // const LoggedIn = true
+  const currentUser = useSelector((state) => state.user.currentUser)
 
+  console.log(currentUser)
   return (
     <div>
 
@@ -24,8 +26,9 @@ function App() {
           <Routes>
 
             <Route exact path='/' element={<HomePage />} />
-            <Route path='/SignUp' element={<SignUpPage />} />
-            <Route path='/SignIn' element={<SignInPage />} />
+            <Route path='/SignUp' element={currentUser ? <Navigate to='/Dashboard' /> : <SignUpPage />} />
+            <Route path='/SignIn' element={
+              currentUser ? <Navigate to='/Dashboard' /> : <SignInPage />} />
 
             {/* display all properties */}
             <Route exact path='/PropertyList' element={<PropertyListPage />} />
@@ -36,10 +39,10 @@ function App() {
             <Route path="/PropertyDesc/:id" element={<PropertyDescPage />} />
 
 
-
-            {/* <Route path='/Dashboard' element={ LoggedIn ? <DashboardPage /> : <Navigate to='/SignIn' />} /> */}
-            <Route path='/Dashboard' element={<DashboardPage />} />
-
+            <Route path='/Dashboard' element={
+              !currentUser ? <Navigate to='/SignIn' /> : <DashboardPage />} />
+       
+    
           </Routes>
         </Header>
       </BrowserRouter>
